@@ -1,0 +1,3 @@
+--Mostrar los alquileres que ocurrieron después de una fecha específica.
+SELECT * FROM AlquilerPLSQL
+WHERE fecha_inicio > TO_DATE('FECHA_ESPECIFICA', 'YYYY-MM-DD');
