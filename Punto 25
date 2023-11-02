@@ -1,0 +1,7 @@
+--Encontrar los autos que han sido alquilados en la misma sucursal donde se realizó una reserva.
+SELECT a.id_auto, a.marca, a.modelo, s.id_sucursal AS id_sucursal_alquiler, r.id_sucursal AS id_sucursal_reserva
+FROM AutoPLSQL a
+JOIN AlquilerPLSQL al ON a.id_auto = al.id_auto
+JOIN ReservaPLSQL r ON al.id_reserva = r.id_reserva
+JOIN SucursalPLSQL s ON al.id_sucursal = s.id_sucursal
+WHERE s.id_sucursal = r.id_sucursal;
