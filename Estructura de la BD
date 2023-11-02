@@ -1,0 +1,51 @@
+-- Tabla de clientes
+
+CREATE TABLE ClientePLSQL (
+    id_cliente NUMBER PRIMARY KEY,
+    nombre VARCHAR2(50),
+    direccion VARCHAR2(100),
+    telefono VARCHAR2(15)
+);
+
+-- Tabla de autos
+
+CREATE TABLE AutoPLSQL (
+    id_auto NUMBER PRIMARY KEY,
+    marca VARCHAR2(50),
+    modelo VARCHAR2(50),
+    ano NUMBER
+);
+
+-- Tabla de alquileres
+
+CREATE TABLE AlquilerPLSQL (
+    id_alquiler NUMBER PRIMARY KEY,
+    id_cliente NUMBER,
+    id_auto NUMBER,
+    fecha_inicio DATE,
+    fecha_fin DATE,
+    id_reserva NUMBER,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
+    FOREIGN KEY (id_auto) REFERENCES Auto(id_auto),
+    FOREIGN KEY (id_reserva) REFERENCES Reserva(id_reserva)
+);
+
+-- Tabla de sucursales
+
+CREATE TABLE SucursalPLSQL (
+    id_sucursal NUMBER PRIMARY KEY,
+    nombre VARCHAR2(50),
+    ciudad VARCHAR2(50),
+    pais VARCHAR2(50)
+);
+
+-- Tabla de reservas
+
+CREATE TABLE ReservaPLSQL (
+    id_reserva NUMBER PRIMARY KEY,
+    id_cliente NUMBER,
+    id_sucursal NUMBER,
+    fecha_reserva DATE,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
+    FOREIGN KEY (id_sucursal) REFERENCES Sucursal(id_sucursal)
+);
