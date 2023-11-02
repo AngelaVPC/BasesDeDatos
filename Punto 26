@@ -1,0 +1,4 @@
+--Actualizar la dirección de un cliente específico.
+UPDATE ClientePLSQL
+SET direccion = 'Nueva Dirección'
+WHERE id_cliente = 'ID_DEL_CLIENTE';
