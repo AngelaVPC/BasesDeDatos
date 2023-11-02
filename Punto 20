@@ -1,0 +1,3 @@
+--Calcular el promedio de años de los autos en la tabla "Auto".
+SELECT AVG(ano) AS promedio_anos
+FROM AutoPLSQL;
