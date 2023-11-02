@@ -1,1 +1,2 @@
--
+--Mostrar todas las sucursales en la tabla "Sucursal".
+SELECT * FROM SucursalPLSQL;
