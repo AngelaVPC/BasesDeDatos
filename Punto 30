@@ -1,0 +1,4 @@
+--Actualizar el año de un auto en la tabla "Auto".
+UPDATE AutoPLSQL
+SET ano = 'NUEVO_ANO'
+WHERE id_auto = 'ID_DEL_AUTO';
