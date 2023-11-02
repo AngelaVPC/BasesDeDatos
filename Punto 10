@@ -1,0 +1,6 @@
+--Mostrar las reservas realizadas por un cliente específico.
+SELECT * FROM ReservaPLSQL
+WHERE id_cliente = 123;
+
+SELECT * FROM ReservaPLSQL
+WHERE nombre = 'Juan';
