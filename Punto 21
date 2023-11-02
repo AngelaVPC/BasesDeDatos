@@ -1,0 +1,4 @@
+--Mostrar los clientes que han realizado al menos una reserva.
+SELECT DISTINCT c.*
+FROM ClientePLSQL c
+JOIN ReservaPLSQL r ON c.id_cliente = r.id_cliente;
