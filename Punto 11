@@ -1,0 +1,5 @@
+--Mostrar los alquileres con los nombres de los clientes y las marcas de los autos.
+SELECT c.nombre AS nombre_cliente, a.marca AS marca_auto
+FROM AlquilerPLSQL alq
+INNER JOIN ClientePLSQL c ON alq.id_cliente = c.id_cliente
+INNER JOIN AutoPLSQL a ON alq.id_auto = a.id_auto;
