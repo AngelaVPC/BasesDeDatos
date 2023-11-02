@@ -1,0 +1,5 @@
+--Mostrar los clientes que no han realizado ninguna reserva.
+SELECT c.*
+FROM ClientePLSQL c
+LEFT JOIN ReservaPLSQL r ON c.id_cliente = r.id_cliente
+WHERE r.id_reserva IS NULL;
