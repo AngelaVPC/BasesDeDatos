@@ -1,0 +1,4 @@
+--Marcar una reserva como completada actualizando la fecha de fin.
+UPDATE ReservaPLSQL
+SET fecha_fin = TO_DATE('FECHA_DE_FINALIZACIÓN', 'YYYY-MM-DD')
+WHERE id_reserva = 'ID_DE_LA_RESERVA';
