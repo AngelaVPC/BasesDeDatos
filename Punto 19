@@ -1,0 +1,7 @@
+--Encontrar el cliente que ha realizado la mayor cantidad de alquileres.
+SELECT c.nombre AS nombre_cliente, COUNT(a.id_alquiler) AS total_alquileres
+FROM ClientePLSQL c
+LEFT JOIN AlquilerPLSQL a ON c.id_cliente = a.id_cliente
+GROUP BY c.nombre
+ORDER BY total_alquileres DESC
+FETCH FIRST 1 ROWS ONLY;
