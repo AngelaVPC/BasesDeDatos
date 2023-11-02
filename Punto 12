@@ -1,0 +1,6 @@
+--Mostrar los clientes que han realizado reservas en una sucursal específica.
+SELECT c.nombre AS nombre_cliente
+FROM ClientePLSQL c
+INNER JOIN ReservaPLSQL r ON c.id_cliente = r.id_cliente
+INNER JOIN SucursalPLSQL s ON r.id_sucursal = s.id_sucursal
+WHERE s.nombre = 'Nombre de la Sucursal';
